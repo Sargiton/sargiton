@@ -5,8 +5,8 @@ import { es, en, id, ar, pt, de, it } from '../lib/idiomas/total-idiomas.js'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-let texto = `*Idioma de Лилит cambiado Correctamente:* `
-let texto2 = `*Seleccione el idioma para Лилит*`
+let texto = `*Idioma de 💋₳VⱤØⱤ₳💋 cambiado Correctamente:* `
+let texto2 = `*Seleccione el idioma para 💋₳VⱤØⱤ₳💋*`
 let texto3 = `*Los Comandos no cambiaran de Idioma, solo el contenido del Mensaje*`
 let idioma = await translate(`${texto}`, { to: args[0], autoCorrect: true })
 let idioma2 = await translate(`${texto2}`, { to: lenguajeGB.lenguaje(), autoCorrect: true })
