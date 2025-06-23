@@ -63,7 +63,8 @@ global.timestamp = { start: new Date }
 const __dirname = global.__dirname(import.meta.url);
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
-global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@').replace(/[|\\{}()[\]^$+*.\-\^]/g, '\\$&') + ']');
+const prefixChars = (opts['prefix'] || '*/!.#$%+£¢€¥^°=¶∆×÷π√✓©®&@').replace(/[|\\{}()[\]^$+*?.\-]/g, '\\$&');
+global.prefix = new RegExp(`^[${prefixChars}]`);
 
 //news
 const databasePath = path.join(__dirname, 'database');
